@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake CashApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">FakeCashApp</div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="#" class="nav-item" id="settingsButton">Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Balance Display -->
+    <div class="balance-section">
+        <h2>Balance</h2>
+        <div id="balance">$0</div>
+    </div>
+
+    <!-- Add Money Section (new input bar) -->
+    <div class="transaction-section">
+        <input type="text" id="addMoneyAmount" placeholder="Amount to add" />
+        <button id="addMoneyButton" class="btn">Add Money</button>
+    </div>
+
+    <!-- Transfer Section -->
+    <div class="transaction-section">
+        <input type="number" id="amount" placeholder="Amount to transfer" />
+        <button id="transferButton" class="btn" disabled>Transfer</button>
+    </div>
+
+    <!-- Transaction History -->
+    <div class="history-section">
+        <h3>Transaction History</h3>
+        <ul id="transactionHistory"></ul>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="settings-modal">
+        <div class="settings-content">
+            <h2>Settings</h2>
+            <div class="dark-mode-toggle">
+                <label for="darkModeSwitch">Dark Mode</label>
+                <input type="checkbox" id="darkModeSwitch">
+            </div>
+            <button id="closeSettingsButton" class="btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
