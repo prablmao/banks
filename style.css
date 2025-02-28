@@ -1,0 +1,241 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Light Mode */
+body {
+    background-color: #8bc34a; /* Green background in light mode */
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background for dark mode */
+    color: white;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    color: #ff5722;
+}
+
+/* Center the settings modal */
+.settings-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centering the modal */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;  /* Modal is hidden by default */
+    z-index: 1000;  /* Ensure it appears above other content */
+    width: 80%;  /* Modal width */
+    max-width: 400px;  /* Maximum width */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.settings-content {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Balance Section Styling */
+.balance-section {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Balance Title */
+.balance-section h2 {
+    font-size: 2rem;  /* Bigger text for the 'Balance' title */
+    margin-bottom: 1rem;
+}
+
+/* Balance Amount */
+#balance {
+    font-size: 3rem;  /* Larger text for the balance amount */
+    font-weight: 500;  /* Make the balance text bolder */
+}
+
+/* Transaction Section - Same height as Balance Section */
+.transaction-section {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 90%;
+    max-width: 400px;
+    margin: 1rem auto;
+    text-align: center;
+    height: 160px;  /* Same height as balance section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.transaction-section ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    max-height: 100px;  /* Limit the height for transaction history */
+    overflow-y: auto;
+}
+
+/* Transaction Items (compact size) */
+.transaction-section li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+/* History Section - Shortened */
+.history-section {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 90%;
+    max-width: 400px;
+    margin: 1rem auto;
+    text-align: center;
+    height: 160px;  /* Same height as balance section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.history-section ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    max-height: 100px;  /* Limit the height for transaction history */
+    overflow-y: auto;
+}
+
+/* Transaction Input Styles */
+.transaction-section input[type="text"], 
+.transaction-section input[type="number"] {
+    padding: 1rem;  /* Bigger padding for the input */
+    font-size: 1.5rem;  /* Larger text size for better visibility */
+    width: 100%;  /* Make it take up the full width of the container */
+    box-sizing: border-box;  /* Ensure the padding is inside the input box */
+    margin-top: 1rem;  /* Add spacing above the input */
+    text-align: center;  /* Center the text inside the input field */
+    border-radius: 8px;
+}
+
+/* Button Styles */
+.transaction-section button {
+    padding: 1rem;  /* Bigger padding for the button */
+    font-size: 1.2rem;  /* Increase font size for button */
+    width: 100%;  /* Button takes full width of container */
+    border-radius: 8px;
+    margin-top: 1rem;  /* Add some space above the button */
+}
+
+/* Button Styles for both light and dark mode */
+button-wrapper {
+    display: inline-block;
+    padding: 0.3rem;
+    border-radius: 8px;
+}
+
+button-wrapper button {
+    background-color: #424242;
+    color: white;
+}
+
+body.dark-mode button-wrapper button {
+    background-color: #424242;
+    color: white;
+}
+
+button-wrapper input {
+    background-color: #424242;
+    color: white;
+}
+
+/* Adjust button and input fields in light mode */
+body button-wrapper button {
+    background-color: white;
+    color: black;
+}
+
+body input[type="text"], 
+body input[type="number"] {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Dark Mode Styles for Sections */
+body.dark-mode .balance-section,
+body.dark-mode .transaction-section,
+body.dark-mode .history-section {
+    background-color: black;
+    color: white;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+/* Light Mode Styles for Sections */
+body .balance-section,
+body .transaction-section,
+body .history-section {
+    background-color: white;
+    color: black;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+/* Dark Mode Styling for Buttons and Inputs */
+body.dark-mode button, 
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="number"] {
+    background-color: #424242;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
